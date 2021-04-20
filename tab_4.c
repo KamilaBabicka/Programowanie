@@ -1,5 +1,5 @@
 //Napisz funkcje ktora otrzymuje dwa argumenty
-//nieujemna liczba calkowita n oraz n-elementowa tablice tab elementow typu int. 
+//nieujemna liczba calkowita n oraz n-elementowa tablice tab elementow typu int.Â 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,7 +8,7 @@ void wypisz(unsigned int n,int *tab){
     printf("%d",tab[i]);
     }
 }
-// a) nadawala wartosc 0 wszystkim elementom tablicy tab 
+// a) nadawala wartosc 0 wszystkim elementom tablicy tabÂ 
 void zera(unsigned int n,int tab[]){
     for(int i=0;i<n;i++){
     tab[i]=0;
