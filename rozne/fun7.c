@@ -1,17 +1,26 @@
-/*Napisz funkcje rekurencyjna zwracajaca dla otrzymanej
-nieujemnej liczby calkowitej n wartosc n-tego wyraz ciagu
-okreslonego w nastepujacy sposob:
-a0=a1=1, an=a_{n-1}+ 2*a_{n-2} +3 , n>1.*/
+//Napisz program ktory wczytuje n>2 i zwraca najwiekszy dzielnik wlasciwy liczby n.
+// Algorytm wyszukiwania zwracanej liczby umiescic w oddzielnej funkcji.
 #include <stdio.h>
-#include <stdlib.h>
-int rekurencja(unsigned int n)
-{
-if (n<=1)
-return 1;
-return rekurencja(n-1)+2*rekurencja(n-2)+3;
-}
+
 int main()
 {
-printf("%d",rekurencja(5));
-return 0;
+int n;
+
+ scanf ( "%i", &n );
+
+ printf ( "%i \n", wyszukaj(n) );
+
+ return 0;
+}
+int wyszukaj ( int n )
+{
+for ( int k = (n - 1) ; k >= 0 ; k -= 1 )
+{
+if ( n % k == 0 )
+{
+return k;
+}
+}
+
+ return 0;
 }
